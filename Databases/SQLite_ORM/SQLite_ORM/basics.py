@@ -325,7 +325,7 @@ def dict_to_sqlType(dtype_dict):
         elif isinstance(item, str): # pd.api.types.is_string_dtype(item) or 
             sql_type = 'TEXT'
         elif isinstance(item, date): # or pd.api.types.is_datetime64_any_dtype(item)
-            sql_type = 'TEXT'       # Store datetime.date as TEXT in 'YYYY-MM-DD' format
+            sql_type = 'DATE'       # Store datetime.date as TEXT in 'YYYY-MM-DD' format
         elif item == list:
             print(f"!!! - List datatype in dictionary ({key}). Will be stored as concatenated string.")
             sql_type = 'TEXT'
